@@ -1,1 +1,5 @@
 
+In this task, i have built a Spring Boot application that demonstrates Kafka’s producer-consumer flow.
+Orders sent to the /orders endpoint are published to a Kafka topic,
+and a consumer listens to the topic to process and print the orders.
+This provides basic understanding of how microservices communicate asynchronously using Kafka.
