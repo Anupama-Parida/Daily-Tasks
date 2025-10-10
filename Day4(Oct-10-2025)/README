@@ -1,1 +1,4 @@
-
+This is a simple microservices task demonstrating synchronous communication between two services,
+EmployeeService and EmpOrderService, using REST APIs. EmployeeService fetches order details from EmpOrderService
+via RestTemplate and returns a combined response.
+In this task i have used Swagger instead of postman,for testing the endpoints.
