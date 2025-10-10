@@ -1,1 +1,7 @@
+This task implements a role-based JWT authentication system using Spring Boot.
+Users can log in via the /auth/login endpoint by posting their credentials (username and password)
+in JSON format, which returns a JWT token. The token is then used in the Authorization header as a
+Bearer token to access protected endpoints such as /api/user. 
 
+The system enforces role-based access,
+allowing an admin user to log in as a regular user, while regular users cannot access admin-level endpoints.
