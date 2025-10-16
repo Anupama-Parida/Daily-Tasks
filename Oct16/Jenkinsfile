@@ -1,0 +1,30 @@
+
+pipeline {
+    agent any
+    tools {
+        maven 'Maven'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                bat 'cd Oct16\\Jenkin_demo && mvn clean compile'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                bat 'cd Oct16\\Jenkin_demo && java -cp target/classes com.test.Print'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build and run succeeded!'
+        }
+        failure {
+            echo 'Build or run failed!'
+        }
+    }
+}
